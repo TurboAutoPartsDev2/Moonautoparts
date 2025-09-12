@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -142,7 +142,7 @@ export default function AboutPage() {
             </div>
             <p className="warranty-description">
               At MoonAutoParts, we stand behind the quality of our products with one of the 
-              industry's most comprehensive warranty programs. Every engine and transmission 
+              industry&apos;s most comprehensive warranty programs. Every engine and transmission 
               comes with our signature <strong>4-Year or 40,000-Mile Limited Warranty</strong> 
               (whichever comes first), providing you peace of mind across all 50 United States.
             </p>

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -38,7 +38,7 @@ export default function ContactPage() {
         <div className="container">
           <div className="trust-badge">
             <span className="badge-icon">🤝</span>
-            <span>Let's Get Started</span>
+            <span>Let&apos;s Get Started</span>
           </div>
           <div className="hero-content">
             <div className="hero-text">
@@ -51,7 +51,7 @@ export default function ContactPage() {
               </h1>
               <p className="hero-description">
                 Speak with our specialists about finding the perfect engine or transmission
-                for your vehicle. We're here to help with expert advice and the best warranties
+                for your vehicle. We&apos;re here to help with expert advice and the best warranties
                 in the industry.
               </p>
               <a href="tel:+18887777082" className="contact-button">
