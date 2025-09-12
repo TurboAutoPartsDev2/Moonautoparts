@@ -80,7 +80,7 @@ productSchema.pre("validate", async function (next) {
       let attempts = 0;
       const MAX_ATTEMPTS = 10; // To avoid an infinite loop
       // Cast this.constructor to a Mongoose Model so TypeScript recognizes findOne
-      const model = this.constructor as mongoose.Model<any>;
+      const model = this.constructor as mongoose.Model<unknown>;
       do {
         newSKU = generateSKU();
         const existingProduct = await model.findOne({ sku: newSKU });

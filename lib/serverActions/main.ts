@@ -12,7 +12,7 @@ export async function SearchFilter(query: string) {
     try {
         const spliteQuery = query.split(" ");
         let yearQuery = null;
-        const searchQuery = spliteQuery.filter((q: any) => {
+        const searchQuery = spliteQuery.filter((q: string) => {
             if (!isNaN(q) && q.length === 4) {
                 yearQuery = Number(q);
                 return false;
@@ -71,7 +71,26 @@ export async function SearchFilter(query: string) {
 }
 
 // lead submit function
-export async function leadSubmit(data: any) {
+type LeadSubmitData = {
+    partName: string;
+    make: string;
+    model: string;
+    year: number;
+    option: string;
+    name: string;
+    email: string;
+    contactNumber: string;
+    leadType: string;
+    zipCode: number;
+};
+
+type LeadSubmitResponseBody = {
+    message?: string;
+    status?: string;
+    error?: string;
+};
+
+export async function leadSubmit(data: LeadSubmitData) {
     try {
         const headers: HeadersInit = {
             "Content-Type": "application/json",
@@ -90,10 +109,10 @@ export async function leadSubmit(data: any) {
             cache: "no-store",
         });
 
-        let responseBody: any = null;
+        let responseBody: LeadSubmitResponseBody | string | null = null;
         const text = await response.text().catch(() => "");
         try {
-            responseBody = text ? JSON.parse(text) : null;
+            responseBody = text ? (JSON.parse(text) as LeadSubmitResponseBody) : null;
         } catch (_e) {
             responseBody = text || null;
         }
@@ -111,7 +130,7 @@ export async function leadSubmit(data: any) {
         }
 
         const successMessage =
-            (responseBody && (responseBody.message || responseBody.status)) ||
+            (responseBody && typeof responseBody === 'object' && (responseBody.message || responseBody.status)) ||
             "Lead submitted successfully.";
         return { success: true, message: successMessage };
     } catch (error) {
