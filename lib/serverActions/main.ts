@@ -11,10 +11,11 @@ export async function SearchFilter(query: string) {
     await connectDB();
     try {
         const spliteQuery = query.split(" ");
-        let yearQuery = null;
+        let yearQuery: number | null = null;
         const searchQuery = spliteQuery.filter((q: string) => {
-            if (!isNaN(q) && q.length === 4) {
-                yearQuery = Number(q);
+            const maybeYear = Number(q);
+            if (!Number.isNaN(maybeYear) && q.length === 4) {
+                yearQuery = maybeYear;
                 return false;
             }
             return true;
@@ -113,13 +114,17 @@ export async function leadSubmit(data: LeadSubmitData) {
         const text = await response.text().catch(() => "");
         try {
             responseBody = text ? (JSON.parse(text) as LeadSubmitResponseBody) : null;
-        } catch (_e) {
+        } catch {
             responseBody = text || null;
         }
 
         if (!response.ok) {
+            const parsedBody =
+                responseBody && typeof responseBody === 'object' && responseBody !== null
+                    ? (responseBody as LeadSubmitResponseBody)
+                    : null;
             const message =
-                (responseBody && (responseBody.message || responseBody.error)) ||
+                (parsedBody && (parsedBody.message || parsedBody.error)) ||
                 `Failed to submit lead. Status ${response.status}`;
             console.error("Error submitting lead:", {
                 status: response.status,
@@ -129,8 +134,12 @@ export async function leadSubmit(data: LeadSubmitData) {
             return { success: false, message };
         }
 
+        const parsedSuccessBody =
+            responseBody && typeof responseBody === 'object' && responseBody !== null
+                ? (responseBody as LeadSubmitResponseBody)
+                : null;
         const successMessage =
-            (responseBody && typeof responseBody === 'object' && (responseBody.message || responseBody.status)) ||
+            (parsedSuccessBody && (parsedSuccessBody.message || parsedSuccessBody.status)) ||
             "Lead submitted successfully.";
         return { success: true, message: successMessage };
     } catch (error) {

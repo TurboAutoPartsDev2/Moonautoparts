@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const uri = process.env.MONGODB_URI;
-let mongodbConnected: any; // this become our case cunnection 
+let mongodbConnected: mongoose.Mongoose | null = null; // cache connection instance
 
 if(!process.env.MONGODB_URI) {
   throw new Error("Please add mongodb uri to .env.local");
