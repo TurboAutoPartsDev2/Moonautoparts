@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="200" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Moon Circle with Gradient -->
+  <defs>
+    <linearGradient id="moonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <!-- Engine Gear Gradient -->
+    <linearGradient id="gearGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Moon Shape -->
+  <path d="M120 40C120 73.1371 93.1371 100 60 100C26.8629 100 0 73.1371 0 40C0 6.86292 26.8629 -20 60 -20C93.1371 -20 120 6.86292 120 40Z" 
+        fill="url(#moonGradient)"
+        transform="translate(40, 50)" />
+
+  <!-- Gear/Engine Symbol -->
+  <g transform="translate(80, 90)">
+    <path d="M40 0C44.4183 0 48 3.58172 48 8V12.6863C48 14.2846 48.9181 15.7614 50.3504 16.5375L54.2141 18.6863C55.6464 19.4624 57.3536 19.4624 58.7859 18.6863L62.6496 16.5375C64.0819 15.7614 65 14.2846 65 12.6863V8C65 3.58172 68.5817 0 73 0H77C81.4183 0 85 3.58172 85 8V12.6863C85 14.2846 85.9181 15.7614 87.3504 16.5375L91.2141 18.6863C92.6464 19.4624 94.3536 19.4624 95.7859 18.6863L99.6496 16.5375C101.082 15.7614 102 14.2846 102 12.6863V8C102 3.58172 105.582 0 110 0H114C118.418 0 122 3.58172 122 8V32C122 36.4183 118.418 40 114 40H40C35.5817 40 32 36.4183 32 32V8C32 3.58172 35.5817 0 40 0Z" 
+          fill="url(#gearGradient)" />
+  </g>
+
+  <!-- Text "MOON" -->
+  <text x="220" y="100" 
+        fill="#1a202c" 
+        font-family="Arial, sans-serif" 
+        font-size="60" 
+        font-weight="bold"
+        letter-spacing="2">MOON</text>
+
+  <!-- Text "AUTO PARTS" -->
+  <text x="220" y="150" 
+        fill="#059669" 
+        font-family="Arial, sans-serif" 
+        font-size="40" 
+        font-weight="600"
+        letter-spacing="1">AUTO PARTS</text>
+
+  <!-- Decorative Line -->
+  <path d="M220 110 L520 110" 
+        stroke="#e2e8f0" 
+        stroke-width="2"/>
+</svg>
