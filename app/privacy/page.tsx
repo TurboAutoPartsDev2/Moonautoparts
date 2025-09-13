@@ -175,9 +175,9 @@ export default function PrivacyPolicyPage() {
             <div className="privacy-card-content">
               <div className="privacy-card-content-space">
                 <p className="privacy-text">
-                  By accessing this website, you are agreeing to be bound by these privacy terms and conditions, all
-                  applicable laws and regulations, and agree that you are responsible for compliance with any applicable
-                  local laws.
+                  {
+                    'The materials on our website are provided "as is". We make no warranties, expressed or implied, regarding the accuracy, reliability, or completeness of the information provided.'
+                  }
                 </p>
                 <p className="privacy-text">
                   The materials on our website are provided "as is". We make no warranties, expressed or implied,
