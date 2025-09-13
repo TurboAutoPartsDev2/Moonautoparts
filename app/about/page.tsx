@@ -424,7 +424,7 @@ export default function AboutPage() {
         }
 
         .hero-content {
-          display: grid;
+          display: block;
           // grid-template-columns: 1.2fr 0.8fr;
           gap: 60px;
           align-items: center;

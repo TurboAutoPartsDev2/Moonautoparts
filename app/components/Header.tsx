@@ -40,6 +40,7 @@ const Header = () => {
               <Link href="/transmission" className={styles.nav_link}>Transmission</Link>
               <Link href="/about" className={styles.nav_link}>About Us</Link>
               <Link href="/contact" className={styles.nav_link}>Contact Us</Link>
+            
             </nav>
             {/* Mobile Menu Button */}
             <button

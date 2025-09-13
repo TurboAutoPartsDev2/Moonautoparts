@@ -14,7 +14,58 @@ export const metadata: Metadata = {
 export default async function Home() {
   async function getFormData() {
     "use server";
-    await connectDB();
+    const dbConnection = await connectDB();
+    
+    // If no MongoDB connection, return mock data
+    if (!dbConnection.mongodbConnected) {
+      console.log("Using mock data - MongoDB not connected");
+      return { 
+        data: [
+          {
+            _id: "mock1",
+            make: "Toyota",
+            models: [
+              {
+                _id: "model1",
+                model: "Camry",
+                years: [
+                  {
+                    _id: "year1",
+                    year: 2020,
+                    Options: [
+                      { _id: "opt1", option: "2.5L 4-Cylinder" },
+                      { _id: "opt2", option: "3.5L V6" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            _id: "mock2",
+            make: "Honda",
+            models: [
+              {
+                _id: "model2",
+                model: "Accord",
+                years: [
+                  {
+                    _id: "year2",
+                    year: 2019,
+                    Options: [
+                      { _id: "opt3", option: "1.5L Turbo" },
+                      { _id: "opt4", option: "2.0L Turbo" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ], 
+        success: true 
+      };
+    }
+    
     try {
       const formData = await SideBarFormAPIs.find().select("-__v").lean();
       return { data: JSON.parse(JSON.stringify(formData)), success: true };

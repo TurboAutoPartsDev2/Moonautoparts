@@ -1,4 +1,4 @@
-"use client";
+
 import type { Metadata } from "next";
 import TransmissionsLandingPage from "./v4";
 import connectDB from "@/lib/db";

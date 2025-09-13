@@ -1,0 +1,496 @@
+.privacy-container {
+    min-height: 100vh;
+    /* Updated background to use green-500 gradient theme */
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  }
+  
+  .privacy-header {
+    background: white;
+    /* Updated border to use green-500 */
+    border-bottom: 1px solid #10b981;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .privacy-header-content {
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 48px 16px;
+    text-align: center;
+  }
+  
+  .privacy-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  
+  .privacy-icon-wrapper {
+    padding: 12px;
+    /* Updated to green-500 background */
+    background: #dcfce7;
+    border-radius: 50%;
+  }
+  
+  .privacy-icon {
+    width: 32px;
+    height: 32px;
+    /* Updated to green-500 color */
+    color: #10b981;
+  }
+  
+  .privacy-title {
+    font-size: 3rem;
+    font-weight: 700;
+    /* Updated gradient to use black and green-500 */
+    background: linear-gradient(to right, #000000, #10b981);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 1.2;
+  }
+  
+  .privacy-subtitle {
+    /* Updated to black for better contrast */
+    color: #374151;
+    font-size: 1.25rem;
+    max-width: 512px;
+    margin: 0 auto;
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+  
+  .privacy-badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  .privacy-badge {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid;
+    transition: background-color 0.2s;
+  }
+  
+  .privacy-badge-blue {
+    /* Updated to green-500 theme */
+    border-color: #bbf7d0;
+    background: #f0fdf4;
+    color: #10b981;
+  }
+  
+  .privacy-badge-blue:hover {
+    background: #dcfce7;
+  }
+  
+  .privacy-badge-green {
+    /* Updated to orange theme */
+    border-color: #fed7aa;
+    background: #fff7ed;
+    color: #f97316;
+  }
+  
+  .privacy-badge-green:hover {
+    background: #ffedd5;
+  }
+  
+  .privacy-badge-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  
+  .privacy-content {
+    max-width: 896px;
+    margin: 0 auto;
+    padding: 32px 16px;
+  }
+  
+  .privacy-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .privacy-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: none;
+    transition: box-shadow 0.3s;
+  }
+  
+  .privacy-card:hover {
+    box-shadow: 0 25px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .privacy-card-header {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 24px;
+  }
+  
+  .privacy-card-header-blue {
+    /* Updated to green-500 gradient */
+    background: linear-gradient(to right, #f0fdf4, #dcfce7);
+  }
+  
+  .privacy-card-header-green {
+    /* Updated to orange gradient */
+    background: linear-gradient(to right, #fff7ed, #ffedd5);
+  }
+  
+  .privacy-card-header-orange {
+    /* Updated to white gradient */
+    background: linear-gradient(to right, #ffffff, #f9fafb);
+  }
+  
+  .privacy-card-header-purple {
+    /* Updated to green-500 gradient */
+    background: linear-gradient(to right, #f0fdf4, #dcfce7);
+  }
+  
+  .privacy-card-header-teal {
+    /* Updated to orange gradient */
+    background: linear-gradient(to right, #fff7ed, #ffedd5);
+  }
+  
+  .privacy-card-header-red {
+    /* Updated to white gradient */
+    background: linear-gradient(to right, #ffffff, #f9fafb);
+  }
+  
+  .privacy-card-header-dark {
+    /* Using more aggressive CSS with higher specificity to force green background */
+    background: linear-gradient(to right, #10b981, #059669) !important;
+    background-color: #10b981 !important;
+    color: white !important;
+  }
+  
+  /* More specific selectors with higher specificity */
+  .privacy-card .privacy-card-header.privacy-card-header-dark {
+    background: linear-gradient(to right, #10b981, #059669) !important;
+    background-color: #10b981 !important;
+  }
+  
+  .privacy-card .privacy-card-header.privacy-card-header-dark > .privacy-card-title {
+    color: white !important;
+  }
+  
+  .privacy-card .privacy-card-header.privacy-card-header-dark > .privacy-card-title .privacy-card-icon-wrapper-white {
+    background: rgba(255, 255, 255, 0.8) !important;
+  }
+  
+  .privacy-card .privacy-card-header.privacy-card-header-dark > .privacy-card-title .privacy-card-icon-white {
+    color: #000000 !important;
+  }
+  
+  /* Force white text only on the actual green background elements */
+  .privacy-card-header-dark .privacy-card-title-white {
+    color: white !important;
+  }
+  
+  .privacy-card-header-dark .privacy-card-icon-wrapper-white {
+    background: rgba(255, 255, 255, 0.8) !important;
+  }
+  
+  .privacy-card-header-dark .privacy-card-icon-white {
+    color: #000000 !important;
+  }
+  
+  .privacy-card-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.25rem;
+    /* Made section headings bold */
+    font-weight: 700;
+    /* Updated to black */
+    color: #000000;
+    margin: 0;
+  }
+  
+  .privacy-card-title-white {
+    color: white !important;
+  }
+  
+  .privacy-card-icon-wrapper {
+    padding: 8px;
+    border-radius: 6px;
+  }
+  
+  .privacy-card-icon-wrapper-blue {
+    /* Updated to green-500 background */
+    background: #dcfce7;
+  }
+  
+  .privacy-card-icon-wrapper-green {
+    /* Updated to orange background */
+    background: #fed7aa;
+  }
+  
+  .privacy-card-icon-wrapper-orange {
+    /* Updated to white background */
+    background: #ffffff;
+  }
+  
+  .privacy-card-icon-wrapper-purple {
+    /* Updated to green-500 background */
+    background: #dcfce7;
+  }
+  
+  .privacy-card-icon-wrapper-teal {
+    /* Updated to orange background */
+    background: #fed7aa;
+  }
+  
+  .privacy-card-icon-wrapper-red {
+    /* Updated to white background */
+    background: #ffffff;
+  }
+  
+  .privacy-card-icon-wrapper-white {
+    background: rgba(255, 255, 255, 0.8) !important;
+  }
+  
+  .privacy-card-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .privacy-card-icon-blue {
+    /* Updated to green-500 */
+    color: #10b981;
+  }
+  
+  .privacy-card-icon-green {
+    /* Updated to orange */
+    color: #f97316;
+  }
+  
+  .privacy-card-icon-orange {
+    /* Updated to black */
+    color: #000000;
+  }
+  
+  .privacy-card-icon-purple {
+    /* Updated to green-500 */
+    color: #10b981;
+  }
+  
+  .privacy-card-icon-teal {
+    /* Updated to orange */
+    color: #f97316;
+  }
+  
+  .privacy-card-icon-red {
+    /* Updated to black */
+    color: #000000;
+  }
+  
+  .privacy-card-icon-white {
+    color: #000000 !important;
+  }
+  
+  .privacy-card-content {
+    padding: 24px;
+  }
+  
+  .privacy-card-content-space {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .privacy-text {
+    /* Updated to darker gray for better readability */
+    color: #374151;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .privacy-text-white {
+    color: #374151 !important; /* Default to dark text */
+  }
+  
+  /* Only apply white text within the actual dark header, not content area */
+  .privacy-card-header-dark .privacy-text-white {
+    color: #ffffff !important;
+  }
+  
+  /* Ensure contact items always use dark text regardless of other classes */
+  .privacy-contact-item .privacy-contact-label,
+  .privacy-contact-item .privacy-contact-value {
+    color: #000000 !important;
+  }
+  
+  /* Fixed contact icon contrast by ensuring all contact icons use dark colors */
+  .privacy-contact-item .privacy-contact-icon {
+    color: #000000 !important;
+  }
+  
+  /* Override any inherited white text colors specifically for contact icons */
+  .privacy-contact-item .privacy-contact-icon-blue,
+  .privacy-contact-item .privacy-contact-icon-green,
+  .privacy-contact-item .privacy-contact-icon-orange {
+    color: #000000 !important;
+  }
+  
+  /* Added styling for phone availability text */
+  .privacy-contact-availability {
+    font-size: 0.75rem;
+    color: #10b981;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .privacy-warranty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+  }
+  
+  .privacy-warranty-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    /* Updated to light green background */
+    background: #f0fdf4;
+    border-radius: 6px;
+  }
+  
+  .privacy-warranty-dot {
+    width: 8px;
+    height: 8px;
+    /* Updated to orange */
+    background: #f97316;
+    border-radius: 50%;
+    margin-top: 8px;
+    flex-shrink: 0;
+  }
+  
+  .privacy-warranty-text {
+    /* Updated to darker gray */
+    color: #374151;
+    font-size: 0.875rem;
+  }
+  
+  .privacy-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+  
+  .privacy-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    /* Updated background to white for better visibility on dark card */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 6px;
+    /* Added border for better definition */
+    border: 1px solid #dcfce7;
+  }
+  
+  .privacy-contact-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .privacy-contact-icon-blue {
+    /* Updated to green-500 */
+    color: #10b981;
+  }
+  
+  .privacy-contact-icon-green {
+    /* Updated to orange */
+    color: #f97316;
+  }
+  
+  .privacy-contact-icon-orange {
+    /* Updated to black for better contrast on white contact items */
+    color: #000000;
+  }
+  
+  .privacy-contact-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .privacy-contact-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    /* Updated to black for better visibility on white contact items */
+    color: #000000;
+  }
+  
+  .privacy-contact-value {
+    font-size: 0.75rem;
+    /* Updated to dark gray for better visibility on white contact items */
+    color: #374151;
+  }
+  
+  .privacy-footer {
+    margin-top: 48px;
+    text-align: center;
+  }
+  
+  .privacy-footer-card {
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    /* Updated border to green-500 */
+    border: 1px solid #10b981;
+  }
+  
+  .privacy-footer-date {
+    /* Updated to black */
+    color: #000000;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .privacy-footer-text {
+    margin-top: 8px;
+    font-size: 0.875rem;
+    /* Updated to darker gray */
+    color: #374151;
+    margin-bottom: 0;
+  }
+  
+  .privacy-footer-highlight {
+    font-weight: 500;
+    /* Updated to green-500 */
+    color: #10b981;
+  }
+  
+  @media (max-width: 640px) {
+    .privacy-title {
+      font-size: 2rem;
+    }
+  
+    .privacy-subtitle {
+      font-size: 1.125rem;
+    }
+  
+    .privacy-warranty-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .privacy-contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

@@ -3,11 +3,13 @@ import mongoose from "mongoose";
 const uri = process.env.MONGODB_URI;
 let mongodbConnected: mongoose.Mongoose | null = null; // cache connection instance
 
-if(!process.env.MONGODB_URI) {
-  throw new Error("Please add mongodb uri to .env.local");
-}
 const connectDB = async () => {
     try {
+      if (!process.env.MONGODB_URI) {
+        console.warn('MONGODB_URI not found in environment variables. Using mock data.');
+        return { mongodbConnected: null };
+      }
+      
       if(mongodbConnected) {
         return { mongodbConnected }
       }
@@ -16,6 +18,7 @@ const connectDB = async () => {
       return { mongodbConnected }
     } catch (error) {
       console.error('Failed to connect to MongoDB', error);
+      return { mongodbConnected: null };
     }
   };
 export default connectDB;  

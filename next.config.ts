@@ -11,6 +11,29 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Optimize CSS loading
+  experimental: {
+    optimizeCss: true,
+  },
+  // Enable CSS optimization
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  // Optimize bundle
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      config.optimization.splitChunks.cacheGroups = {
+        ...config.optimization.splitChunks.cacheGroups,
+        styles: {
+          name: 'styles',
+          test: /\.(css|scss|sass)$/,
+          chunks: 'all',
+          enforce: true,
+        },
+      };
+    }
+    return config;
+  },
 };
 
 export default nextConfig;

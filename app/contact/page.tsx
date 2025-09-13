@@ -1,29 +1,33 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 // import Image from 'next/image';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    vehicleMake: '',
-    vehicleModel: '',
-    vehicleYear: '',
-    partType: 'engine', // or transmission
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    vehicleMake: "",
+    vehicleModel: "",
+    vehicleYear: "",
+    partType: "engine", // or transmission
+    message: "",
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission logic here
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -50,9 +54,9 @@ export default function ContactPage() {
                 </span>
               </h1>
               <p className="hero-description">
-                Speak with our specialists about finding the perfect engine or transmission
-                for your vehicle. We&apos;re here to help with expert advice and the best warranties
-                in the industry.
+                Speak with our specialists about finding the perfect engine or
+                transmission for your vehicle. We&apos;re here to help with
+                expert advice and the best warranties in the industry.
               </p>
               <a href="tel:+18887777082" className="contact-button">
                 <span className="phone-icon">📞</span>
@@ -70,7 +74,12 @@ export default function ContactPage() {
             <div className="contact-card location">
               <div className="icon">📍</div>
               <h3>Our Location</h3>
-              <p>126 S Ohio St, Apt L<br />Salina, KS 67401<br />United States</p>
+              <p>
+                126 S Ohio St, Apt L<br />
+                Salina, KS 67401
+                <br />
+                United States
+              </p>
             </div>
             <div className="contact-card phone">
               <div className="icon">📞</div>
@@ -97,7 +106,7 @@ export default function ContactPage() {
       <section className="quote-form-section">
         <div className="container">
           <div className="form-and-map">
-            <div className="quote-form">
+            {/* <div className="quote-form">
               <h2>Get Your Quote</h2>
               <form onSubmit={handleSubmit}>
                 <div className="form-grid">
@@ -202,13 +211,14 @@ export default function ContactPage() {
                   Get Free Quote
                 </button>
               </form>
-            </div>
+            </div> */}
+
             <div className="map-container">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3095.676975311!2d-97.61343!3d38.840234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87bcd6b0c5b89603%3A0x66ea01c3a6428780!2s126%20S%20Ohio%20St%2C%20Salina%2C%20KS%2067401%2C%20USA!5e0!3m2!1sen!2sus!4v1631456789012!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
-                style={{ border: 0, borderRadius: '20px' }}
+                style={{ border: 0, borderRadius: "20px" }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -220,7 +230,7 @@ export default function ContactPage() {
 
       <style jsx>{`
         .contact-page {
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
             "Helvetica Neue", Arial, sans-serif;
         }
 
@@ -232,6 +242,12 @@ export default function ContactPage() {
           background: linear-gradient(135deg, #059669 0%, #10b981 100%);
           overflow: hidden;
           padding: 40px 0;
+        }
+
+        .hero-content {
+          display: grid;
+          gap: 60px;
+          align-items: center;
         }
 
         .hero-background {
@@ -310,6 +326,8 @@ export default function ContactPage() {
         }
 
         .hero-content {
+          display: block;
+          align-items: center;
           position: relative;
           z-index: 2;
           color: white;
@@ -427,7 +445,7 @@ export default function ContactPage() {
 
         .form-and-map {
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          // grid-template-columns: 1fr 1fr;
           gap: 40px;
           align-items: start;
         }
@@ -508,7 +526,7 @@ export default function ContactPage() {
 
         .map-container {
           height: 100%;
-          min-height: 650px;
+          min-height: 450px;
           border-radius: 20px;
           overflow: hidden;
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -517,6 +535,12 @@ export default function ContactPage() {
         @media (max-width: 768px) {
           .hero-title {
             font-size: 2.5rem;
+          }
+
+           .hero-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            text-align: center;
           }
 
           .form-and-map {
