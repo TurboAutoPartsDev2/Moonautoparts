@@ -1,5 +1,5 @@
-"use client"
-import "./privacy.css"
+"use client";
+import "./privacy.css";
 
 export default function PrivacyPolicyPage() {
   return (
@@ -37,7 +37,7 @@ export default function PrivacyPolicyPage() {
                 <div className="privacy-card-icon-wrapper privacy-card-icon-wrapper-blue">
                   <span className="privacy-card-icon privacy-card-icon-blue">📄</span>
                 </div>
-                Information Collection & Use
+                Information Collection &amp; Use
               </div>
             </div>
             <div className="privacy-card-content">
@@ -62,7 +62,7 @@ export default function PrivacyPolicyPage() {
                 <div className="privacy-card-icon-wrapper privacy-card-icon-wrapper-green">
                   <span className="privacy-card-icon privacy-card-icon-green">🔒</span>
                 </div>
-                Data Retention & Security
+                Data Retention &amp; Security
               </div>
             </div>
             <div className="privacy-card-content">
@@ -146,7 +146,7 @@ export default function PrivacyPolicyPage() {
                 <div className="privacy-card-icon-wrapper privacy-card-icon-wrapper-teal">
                   <span className="privacy-card-icon privacy-card-icon-teal">👥</span>
                 </div>
-                Your Rights & Transparency
+                Your Rights &amp; Transparency
               </div>
             </div>
             <div className="privacy-card-content">
@@ -175,13 +175,12 @@ export default function PrivacyPolicyPage() {
             <div className="privacy-card-content">
               <div className="privacy-card-content-space">
                 <p className="privacy-text">
-                  {
-                    'The materials on our website are provided "as is". We make no warranties, expressed or implied, regarding the accuracy, reliability, or completeness of the information provided.'
-                  }
+                  The materials on our website are provided &quot;as is&quot;. We make no warranties, expressed or
+                  implied, regarding the accuracy, reliability, or completeness of the information provided.
                 </p>
                 <p className="privacy-text">
-                  The materials on our website are provided "as is". We make no warranties, expressed or implied,
-                  regarding the accuracy, reliability, or completeness of the information provided.
+                  The materials on our website are provided &quot;as is&quot;. We make no warranties, expressed or
+                  implied, regarding the accuracy, reliability, or completeness of the information provided.
                 </p>
               </div>
             </div>
@@ -193,7 +192,7 @@ export default function PrivacyPolicyPage() {
                 <div className="privacy-card-icon-wrapper privacy-card-icon-wrapper-white">
                   <span className="privacy-card-icon privacy-card-icon-white">📞</span>
                 </div>
-                Contact & Updates
+                Contact &amp; Updates
               </div>
             </div>
             <div className="privacy-card-content">
@@ -249,5 +248,5 @@ export default function PrivacyPolicyPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
