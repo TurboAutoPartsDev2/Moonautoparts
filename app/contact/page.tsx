@@ -360,6 +360,7 @@ export default function ContactPage() {
         .hero-description {
           font-size: 1.2rem;
           margin: 20px 0;
+          color: #ffff;
           opacity: 0.9;
         }
 

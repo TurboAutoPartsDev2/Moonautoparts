@@ -126,8 +126,7 @@ export default function TransmissionsLandingPage({ data }: { data: Make[] }) {
       {showSuccess && (
         <div className="modal-overlay" role="dialog" aria-modal="true">
           <div className="modal">
-            <div className="modal-icon">✅</div>
-            <h3 className="modal-title">Success & Thank You!</h3>
+            <h3 className="modal-title">Thank You!</h3>
             <p className="modal-text">
               Your query is registered with us. We will get back to you shortly.
             </p>
