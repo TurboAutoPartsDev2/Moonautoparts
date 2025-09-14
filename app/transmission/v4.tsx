@@ -161,7 +161,7 @@ export default function TransmissionsLandingPage({ data }: { data: Make[] }) {
               <p className="hero-description">
                 Save up to 70% on premium used transmissions with comprehensive
                 testing and up to 48-month warranty. Free nationwide shipping,
-                expert installation support, and 10-minute response time
+                expert support, and 15-minute response time
                 guaranteed.
               </p>
               <div className="hero-benefits">
@@ -544,14 +544,13 @@ export default function TransmissionsLandingPage({ data }: { data: Make[] }) {
             </div>
             <div className="feature-card">
               <div className="feature-icon">⚡</div>
-              <h3>Quick Installation Support</h3>
+              <h3>Quick Delivery Support</h3>
               <p>
-                Fast delivery and professional installation support to minimize
+                Fast delivery on commercial address to minimize
                 your vehicle downtime and get you back on the road quickly.
               </p>
               <ul>
-                <li>✓ Professional guidance</li>
-                <li>✓ Installation instructions</li>
+                <li>✓ Fast delivery to commercial address</li>
                 <li>✓ Technical support</li>
                 <li>✓ Expert consultation</li>
               </ul>
@@ -791,9 +790,9 @@ export default function TransmissionsLandingPage({ data }: { data: Make[] }) {
               >
                 Get My Free Quote Now 💬
               </button>
-              <a href="tel:+1 (888) 618-8881" className="cta-secondary">
+              {/* <a href="tel:+1 (888) 618-8881" className="cta-secondary">
                 📞 Call For Financing
-              </a>
+              </a> */}
             </div>
             <div className="cta-guarantees">
               <div className="guarantee">✓ 10-Minute Response Guaranteed</div>
@@ -803,9 +802,9 @@ export default function TransmissionsLandingPage({ data }: { data: Make[] }) {
           </div>
         </div>
       </section>
-      <a href="tel:+1 (888) 618-8881" className="_BottomFxi9">
+      {/* <a href="tel:+1 (888) 618-8881" className="_BottomFxi9">
         📞 Call For Financing
-      </a>
+      </a> */}
       <style jsx>{`
         .modal-overlay {
           position: fixed;

@@ -45,6 +45,7 @@ const Footer = () => {
               <Link href="/transmission">Transmission</Link>
               <Link href="/about">About Us</Link>
               <Link href="/contact">Contact Us</Link>
+              <Link href="/terms">Term & Condition</Link>
               <Link href="/privacy">Privacy Policy</Link>
             </nav>
           </div>
@@ -54,7 +55,6 @@ const Footer = () => {
             <ul className={styles.servicesList}>
               <li>✓ Used Engines</li>
               <li>✓ Used Transmissions</li>
-              <li>✓ Installation Support</li>
               <li>✓ Technical Consultation</li>
               <li>✓ Warranty Services</li>
             </ul>

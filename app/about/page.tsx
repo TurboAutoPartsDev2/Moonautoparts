@@ -151,7 +151,6 @@ export default function AboutPage() {
               <ul className="warranty-list">
                 <li>Complete parts coverage for 4 years or 40,000 miles</li>
                 <li>Nationwide coverage valid in all 50 U.S. states</li>
-                <li>Labor cost coverage for qualified repairs</li>
                 <li>Transferable warranty if you sell your vehicle</li>
                 <li>No deductible on covered repairs</li>
               </ul>
