@@ -131,7 +131,7 @@ export default function TermsAndConditions() {
             <p>
               Moon Auto Parts has not reviewed all of the sites linked to its Internet web site and is not responsible
               for the contents of any such linked site. The inclusion of any link does not imply endorsement by Moon
-              Auto Parts of the site. Use of any such linked web site is at the user's own risk.
+              Auto Parts of the site. Use of any such linked web site is at the user own risk.
             </p>
           </div>
         </div>
