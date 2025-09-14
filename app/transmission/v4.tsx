@@ -681,7 +681,7 @@ export default function TransmissionsLandingPage({ data }: { data: Make[] }) {
                 <h3>Get Your Quote</h3>
                 <p>
                   Fill out our simple form and get instant pricing for your
-                  specific vehicle in just 10 minutes.
+                  specific vehicle in just 15 minutes.
                 </p>
               </div>
             </div>

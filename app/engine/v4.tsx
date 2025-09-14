@@ -586,7 +586,7 @@ export default function EnginesLandingPage({ data }: { data: Make[] }) {
               <p>
                 Fast shipping and excellent customer support. The engine works
                 perfectly and the warranty coverage is outstanding. Got my quote
-                in 10 minutes and the whole process was seamless. Great
+                in 15 minutes and the whole process was seamless. Great
                 experience!
               </p>
               <div className="customer-info">
